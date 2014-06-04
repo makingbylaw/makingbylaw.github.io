@@ -50,7 +50,7 @@ void setup() {
   //myMovie.loop();
   minim = new Minim(this);
   player = minim.loadFile("longing.mp3", 2048);
-  player.play();
+  player.loop();
   
   // Set the canvas side
   size(800, 800);
