@@ -29,7 +29,7 @@
 
 
 //import processing.video.*;
-import ddf.minim.*;
+//import ddf.minim.*;
 
 // Other objects
 GameCanvas game;
@@ -37,8 +37,8 @@ InitialScene initialScene;
 EndSnow endSnow;
 
 //Movie myMovie;
-AudioPlayer player;
-Minim minim;
+//AudioPlayer player;
+//Minim minim;
 
 // Object counter to generate unique id's (where required)
 static int objectCounter = 0;
@@ -48,9 +48,9 @@ void setup() {
   // Set the music
   //myMovie = new Movie (this, "longing.mp3");
   //myMovie.loop();
-  minim = new Minim(this);
-  player = minim.loadFile("longing.mp3", 2048);
-  player.play();
+  //minim = new Minim(this);
+  //player = minim.loadFile("longing.mp3", 2048);
+  //player.play();
   
   // Set the canvas side
   size(800, 800);
@@ -137,8 +137,8 @@ if (key == CODED) {
 }
 
 void stop() {
-  player.close();
-  minim.stop();
+  //player.close();
+  //minim.stop();
   super.stop();
 }
 
