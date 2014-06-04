@@ -43,8 +43,8 @@ static int objectCounter = 0;
 void setup() {
   
   // Set the music
-  //myMovie = new Movie (this, "longing.aiff");
-  //myMovie.loop();
+  myMovie = new Movie (this, "longing.mp3");
+  myMovie.loop();
   
   // Set the canvas side
   size(800, 800);
