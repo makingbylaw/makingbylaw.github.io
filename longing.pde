@@ -28,14 +28,17 @@
 // music source: http://thecreatorsproject.vice.com/mira-calix/my-secret-heart
 
 
-import processing.video.*;
+//import processing.video.*;
+import ddf.minim.*;
 
 // Other objects
 GameCanvas game;
 InitialScene initialScene;
 EndSnow endSnow;
 
-Movie myMovie;
+//Movie myMovie;
+AudioPlayer player;
+Minim minim;
 
 // Object counter to generate unique id's (where required)
 static int objectCounter = 0;
@@ -45,6 +48,9 @@ void setup() {
   // Set the music
   //myMovie = new Movie (this, "longing.mp3");
   //myMovie.loop();
+  minim = new Minim(this);
+  player = minim.loadFile("longing.mp3", 2048);
+  player.play();
   
   // Set the canvas side
   size(800, 800);
@@ -127,7 +133,14 @@ if (key == CODED) {
         endSnow.player.deltaX = 0;
         break;
     } 
-  }}
+  }
+}
+
+void stop() {
+  player.close();
+  minim.stop();
+  super.stop();
+}
 
 
 
