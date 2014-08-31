@@ -1,11 +1,10 @@
 ---
 layout: page
-title: About
+title: THE DESIGNER
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Born in Hong Kong, Katy Law is a visual communicator. Her interest in visual communication began in her childhood, before the days of Graphical User Interfaces. Katy's pastimes ranged from shape and symmetry studies in her colorings to storytelling through the composition of paper collages. Her quest to rethink solutions to exisiting problems has led her to complete her Bachelor's Degree in Interaction Design at CCA. Today, she defines and creates systems and interfaces to delight humans.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+
