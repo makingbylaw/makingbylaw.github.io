@@ -157,16 +157,16 @@ border-color: gray;
 /**ok*/
 
 
-/*from the codepen css http://codepen.io/anon/pen/LqJhc */
+/*onepage-scroll.css*/
 
-
+/* This prevents page
 body, html {
   margin: 0;
   overflow: hidden;
   -webkit-transition: opacity 400ms;
   -moz-transition: opacity 400ms;
   transition: opacity 400ms;
-}
+}*/
 
 /*body, .onepage-wrapper, html {
   display: block;
@@ -193,13 +193,13 @@ body, html {
 
 /*side dot nav*/
 
-.onepage-pagination a:-webkit-any-link {
+.onepage-pagination #nav a:-webkit-any-link {
 color: -webkit-link;
 text-decoration: underline;
 cursor: auto;
 }
 
-.onepage-pagination {
+#nav{
   position: fixed;
   right: 10px; /*position on browser*/
   top: 50%;
@@ -209,6 +209,12 @@ cursor: auto;
   padding: 0;
   font-size: 14px;
 }
+
+li{
+  list-style: none;  
+}
+
+
 .onepage-pagination li {
   padding: 0;
   text-align: center;
@@ -233,16 +239,18 @@ cursor: auto;
   
 }
 .onepage-pagination li a.active:before{
-  background-color: #FFF;
-width: 12px;
-height: 12px;
-margin: 0 0 0 -1px;
-box-shadow: 0 0 0px 2px rgba(0,0,0,0.2);
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
 }
 
 
 /*.onepage-pagination li a.active:before{ /*active nav dot section*/
   /*
+  box-shadow: 0 0 0px 2px rgba(0,0,0,0.2);
 box-shadow: 0 0 0px 2px rgba(255,255,255,0.4);
 border: none;
 width: 9px;
@@ -269,22 +277,22 @@ box-shadow: 0 0 0px 2px rgba(0,0,0,0.2);
   left: 8px;
 }*/
 
-
+/*
 .nav.dot:hover {
     background: #fff;
     /*background: rgba(0,0,0,0.1);*/
-    border: 1px solid #333;
+    /*border: 1px solid #333;
     /*border: rgba(0,0,0,0.1);*/
-    border-radius: 15px;
+    /*border-radius: 15px;
     
     left: 0px;
-    /*margin-top: -14px;*/
+    /*margin-top: -14px;
 
-}
+}*/
 
 
 
-.nav.dot:active, .nav.dot a:active { 
+/*.nav.dot:active, .nav.dot a:active { 
     
     background-color: #FFF;
 width: 12px;
@@ -292,14 +300,13 @@ height: 12px;
 margin: 0 0 0 -1px;
 box-shadow: 0 0 0px 2px rgba(0,0,0,0.2);
 
-}
+}*/
 
 
 
 
 
-/*controls scollability of the page?*/
-/*.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
   overflow: auto;
 }
 
@@ -328,7 +335,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 COLORS
 *****************************/
 
-section:nth-child(1) { background:#eee }
-section:nth-child(2) { background:#ddd }
-section:nth-child(3) { background:#ccc }
-section:nth-child(4) { background:#bbb }
+section:nth-child(1) { background:#fff }
+section:nth-child(2) { background:#fff }
+section:nth-child(3) { background:#fff }
+section:nth-child(4) { background:#fff }
+
+
+
+/* sections */
+
