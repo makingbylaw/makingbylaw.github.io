@@ -8,7 +8,7 @@ permalink: /example/
 
 The grey text in markdown at the start is for search engines.
 
-![Hottie alert](/assets/images/katy.jpg "Katy Law with Title")
+![Hottie alert](/assets/images/katy.gif "Katy Law with Title")
 
 ### Without hover text
 

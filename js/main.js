@@ -84,4 +84,12 @@ jQuery(document).ready(function($){
           600
         );
   }
+
+   $('.bxslider').bxSlider({
+    mode: 'fade',
+    auto: true,
+    autoControls: true
+    });
+
+
 });
