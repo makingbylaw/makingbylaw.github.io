@@ -232,6 +232,8 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 }
 
 
+
+
 /* -------------------------------- 
 
 side nav Modules - reusable parts of our design from codyhouse
@@ -638,13 +640,25 @@ bx-slider selected from https://github.com/stevenwanderski/bxslider-4/blob/maste
 /* PREV NEXT */
 
 .bx-wrapper .bx-prev {
-  right: 80px; /*left: 10px;*/
-  background: url(/assets/images/left_arrow.png) no-repeat 0 0px;
+  
+  left: 170px; /*left: 10px;*/
+  top: 150px;
+  height: 63%;
+  width: 200px;
+  /*background: url(/assets/images/left_arrow.png) no-repeat 0 0px;*/
+  cursor: w-resize;
+  
 }
 
 .bx-wrapper .bx-next {
-  right: 60px;
-  background: url(/assets/images/right_arrow.png) no-repeat 30px 0px;
+  
+  right: 170px;
+  top: 150px;
+  height: 63%;
+  width: 200px;
+  /*background: url(/assets/images/right_arrow.png) no-repeat -40px -30px;*/
+  cursor: e-resize;
+  
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -652,21 +666,21 @@ bx-slider selected from https://github.com/stevenwanderski/bxslider-4/blob/maste
 }
 
 .bx-wrapper .bx-next:hover {
-  background-position: 30px 0px;
+  background-position: 0px 0px;
+
 }
 
 .bx-wrapper .bx-controls-direction a { /*prev and next areas */
   position: absolute;
-  top: 100%;
+  
   margin-top: -16px;
   outline: 0;
-  width: 70px;
-  height: 50px;
-  text-indent: -9999px; /* moves the text standin away*/
+  
+  text-indent: -9999px; /* moves the text stand-in away*/
   z-index: 9999;
 }
 
-.bx-wrapper .bx-controls-direction a.disabled {
+/*.bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
 
