@@ -6,15 +6,15 @@
 
 
 // Our variables
-$base-font-family: Open Sans, Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: Lato, Open Sans, Helvetica Neue, Arial, sans-serif;
+$base-font-size:   21px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #ffffff;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -33,6 +33,11 @@ $on-laptop:        800px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+
+.wrapper {
+
+  
+}
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -233,12 +238,80 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 
 
 
+/* -------------------------------- 
+
+MakingByLaw changes to base template
+
+-------------------------------- */
+
+
+h1 {
+
+  font-family: Homenaje, Helvetica Neue, sans-serif;
+  margin-top: 15px;
+  font-size: 27px;
+  
+}
+
+h2 {
+
+  font-family: Hanuman, Helvetica Neue, sans-serif;
+  font-weight: 800;
+}
+
+h3 {
+
+  font-family: Hanuman, Helvetica Neue, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  line-height: 2.5;
+  height: 450px;
+}
+
+.site-nav {
+
+  display: none;
+}
+
+.site-header {
+
+  border-bottom: 1px solid #f1f1f1;
+
+}
+
+.page-heading {
+
+  text-align: center;
+  line-height: 8;
+  height: 300px;
+
+}
+
+.side {
+
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 50px;
+
+}
+
+.copy {
+
+  padding: 0 20px 130px 45px;
+
+}
+
 
 /* -------------------------------- 
 
 side nav Modules - reusable parts of our design from codyhouse
 
 -------------------------------- */
+
 .cd-img-replace {
   /* replace text with a background-image */
   display: inline-block;
@@ -323,7 +396,7 @@ Main components
 
 
 li{
-  list-style: none;  
+  list-style: none; 
 }
 
 /* No Touch devices */
@@ -333,8 +406,8 @@ li{
 
 .no-touch #cd-vertical-nav {
   position: fixed;
-  right: 40px;
-  top: 50%;
+  right: 20px;
+  top: 100px;
   bottom: auto;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -552,30 +625,47 @@ li{
 /* -------------------------------- 
 
 bx-slider selected from https://github.com/stevenwanderski/bxslider-4/blob/master/jquery.bxslider.css
+This is the Image dispaly that auto plays
 
 -------------------------------- */
 
 .bx-wrapper ul{
-  max-width: 100%;
-  position: relative;
-  margin: 0 auto 0px;
-  padding: 0;
+  float: left;
+  width: 50%;
+
 }
 
 
 .bx-wrapper img {
-  max-width: 300px;
-  display: block;
-  margin: 0 auto 0;
+  float: right;
+  width: 300px;
+  padding-right: 30px;
 
 }
+
+
 
 
 /** THEME
 
 ===================================*/
 
-/* VIEWPORT CONTAINS THE IMAGES */
+/* VIEWPORT CONTAINS THE IMAGES 
+
+
+  
+  /*fix other elements on the page moving (on Chrome)
+
+
+
+
+
+
+
+
+/* PAGER The small dots on the bottom */
+/* Rectangular dots under iPhont */
+
 
 .bx-wrapper .bx-viewport {
   -moz-box-shadow: 0 0 0px #ccc;
@@ -583,25 +673,32 @@ bx-slider selected from https://github.com/stevenwanderski/bxslider-4/blob/maste
   box-shadow: 0 0 0px #ccc;
   border:  50px 50px 50px 0 solid #fff;
   background: #fff;
-  
-  /*fix other elements on the page moving (on Chrome)*/
+
   -webkit-transform: translatez(0);
   -moz-transform: translatez(0);
       -ms-transform: translatez(0);
       -o-transform: translatez(0);
       transform: translatez(0);
-}
+} 
 
 
-/* PAGER The small dots on the bottom */
-/* Rectangular dots under iPhont */
-
-.bx-wrapper .bx-pager,
-.bx-wrapper .bx-controls-auto {
+.bx-wrapper .bx-pager.bx-default-pager a {
+  left:200px;
   
-  position: relative;
-  margin: 0 auto 0px;
+  background: #ccc;
+  text-indent: -9999px;
+  display: block;
+  width: 7px;
+  height: 11px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 2px;
 }
+
+
+
 
 .bx-wrapper .bx-pager {
   
@@ -622,27 +719,17 @@ bx-slider selected from https://github.com/stevenwanderski/bxslider-4/blob/maste
 
 
 
-.bx-wrapper .bx-pager.bx-default-pager a {
-  left:200px;
-  
-  background: #ccc;
-  text-indent: -9999px;
-  display: block;
-  width: 7px;
-  height: 11px;
-  margin: 0 5px;
-  outline: 0;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 2px;
-}
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
   background: #606060;
 }
 
-/* PREV NEXT hover areas cursors */
+/* 
+
+PREV NEXT hover areas cursors 
+
+*/
 
 .bx-wrapper .bx-prev {
   
@@ -719,7 +806,11 @@ bx-slider selected from https://github.com/stevenwanderski/bxslider-4/blob/maste
   
 }
 
-/* Play Button */
+/* 
+
+Play Button 
+
+*/
 
 .bx-wrapper .bx-controls-auto .bx-start {
   display: block;
@@ -736,7 +827,11 @@ bx-slider selected from https://github.com/stevenwanderski/bxslider-4/blob/maste
   background-position: 0px -50px;
 }
 
-/* Pause Button */
+/* 
+
+Pause Button 
+
+*/
 
 .bx-wrapper .bx-controls-auto .bx-stop {
   display: block;
