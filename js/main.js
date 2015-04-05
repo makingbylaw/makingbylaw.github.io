@@ -93,3 +93,9 @@ jQuery(document).ready(function($){
 
 
 });
+
+//icon fade in with scroll down
+$(function() {
+$('#fds img').each(function(i) {
+$(this).delay((i++) * 500).fadeTo(1000, 1); })
+});

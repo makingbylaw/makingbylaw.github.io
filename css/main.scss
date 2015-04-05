@@ -34,6 +34,8 @@ $on-laptop:        800px;
 //     }
 // }
 
+
+
 .wrapper {
 
   
@@ -243,29 +245,103 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 MakingByLaw changes to base template
 
 -------------------------------- */
+#header {
+  padding: 15px;
+  right:0;
+  height: 35px;
+
+}
+
+//top left Titles
+#header .title {
+  font-family: Gotham, Helvetica Neue, sans-serif;
+  font-weight: 800;
+
+}
+
+#header a {
+  padding: 5px;
+  text-decoration: none;
+  color: #cecdcb;
+  background: transparent;
+}
+
+
+.content {
+  width: 90%;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+aside {
+  height: 100%;
+  margin: auto;
+}
+
+aside .explained {
+  
+  max-width: 720px;
+  margin-left: 65px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.explained.icon-logo.margintop {
+  width: 90%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  min-height: 200px;
+  text-align: center;
+}
+
+.margintop {
+  margin-top: 85px;
+}
+
+
+aside .explained .about {
+  width: 100%;
+}
 
 
 h1 {
 
   font-family: Homenaje, Helvetica Neue, sans-serif;
-  margin-top: 15px;
-  font-size: 27px;
+  margin: 0;
+  font-size: 2.1em;
+  color: #525252;
+  font-weight: 600;
   
 }
 
 h2 {
-
-  font-family: Hanuman, Helvetica Neue, sans-serif;
-  font-weight: 800;
+  font-family: Homenaje, Helvetica Neue, sans-serif;
+  margin: 0;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
 }
 
-h3 {
 
-  font-family: Hanuman, Helvetica Neue, sans-serif;
-  font-size: 28px;
-  text-align: center;
-  line-height: 2.5;
-  height: 450px;
+h3 {
+  font-family: Homenaje, Helvetica Neue, sans-serif;
+  font-weight: 800;  
+}
+
+p {
+  font-family: "aktiv-grotesk-std",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #95989c;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: inherit;
+
 }
 
 .site-nav {
@@ -275,9 +351,10 @@ h3 {
 
 .site-header {
 
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 0px solid #f1f1f1;
 
 }
+
 
 .page-heading {
 
@@ -304,6 +381,57 @@ h3 {
   padding: 0 20px 130px 45px;
 
 }
+
+
+/* -------------------------------- 
+
+sills icons clickable
+
+-------------------------------- */
+
+
+#fds { 
+
+}
+
+#fds img {  opacity: 0; }
+
+.icon {
+  width:150px;
+  height: 150px;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-left: 16px;
+
+}
+
+.thumb {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+  position: relative;
+  color: #62b9f7;
+}
+
+.thumb img {
+  display: block;
+}
+
+.thumb span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+
+
+
+
 
 
 /* -------------------------------- 
