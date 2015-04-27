@@ -1,12 +1,11 @@
 # Site settings
-title: MakingBylaw
-email: lawkaty@live.com
-description: Interaction Design
-  
+permalink: '/blog/:year/:title/'
+base: http://makingbylaw.com
+name: Interaction Designer
+author: Katy Law
+
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-# github_username:  jekyll
+url: http://makingbylaw.com
 
 # exclude: [ 'assets' ]
 

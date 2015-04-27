@@ -1,32 +1,13 @@
 ---
 layout: post
-title:  "Katy"
+title:  "Something Else"
 date:   2014-08-30 13:05:47
-categories: update
+tags: 
+- update
 ---
- 
 
- <ul class="bxslider">
-  <li><img src="assets/images/unnamed.jpg" /></li>
-  <li><img src="assets/images/unnamed1.jpg" /></li>
-  <li><img src="assets/images/unnamed2.jpg" /></li>
-</ul>
+Bla bla
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>This is going to be the Matchup Project
+# Hello
+
+Bla bla
