@@ -49,7 +49,7 @@ void setup() {
   //myMovie = new Movie (this, "longing.mp3");
   //myMovie.loop();
   minim = new Minim(this);
-  player = minim.loadFile("longing.mp3", 2048);
+  player = minim.loadFile("/assets/longing/longing.mp3", 2048);
   player.loop();
   
   // Set the canvas side
