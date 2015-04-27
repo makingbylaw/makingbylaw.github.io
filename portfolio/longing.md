@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title:  Longing
-subtitle: If you want it
+subtitle: An exploration into the human psyche
 portfolio_preview: http://demo.krownthemes.com/jackman/img/folio_1.jpg
 category: Game
 
