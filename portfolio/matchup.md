@@ -13,7 +13,7 @@ order: 1
  
 Match Up game description
 
-{% slideshow [mode:'fade', auto: true, thumbnails: 'scaled'] %}
+{% slideshow [mode:'fade', auto: true, thumbnails: 'scaled', easing: 'ease'] %}
 /img/matchup/matchup_1.png
 /img/matchup/matchup_2.png
 /img/matchup/matchup_3.png

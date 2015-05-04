@@ -34,7 +34,7 @@ class SlideshowBlock < Liquid::Block
           use_thumbs = false
         elsif @options[key].to_s == 'thumbed'
           generate_pager = true
-          use_thumbs = false
+          use_thumbs = true
         else
           generate_pager = false
           use_thumbs = false
