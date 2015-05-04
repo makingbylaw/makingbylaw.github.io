@@ -615,3 +615,25 @@ a, #posts-list li, #posts-list time, .projects-list .caption {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
+
+#slideshow-pager {
+  text-align: center;
+  margin-top: -30px;
+}
+
+#slideshow-pager a {
+  margin: 0 3px;
+}
+
+#slideshow-pager a img {
+  padding: 3px;
+  border: solid #ccc 1px;
+}
+
+#slideshow-pager a:hover img,
+#slideshow-pager a.active img {
+  border: solid #5280DD 1px;
+}
+.scaled-thumb img {
+  width: 100px;
+}

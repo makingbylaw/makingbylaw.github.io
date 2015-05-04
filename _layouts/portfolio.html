@@ -22,7 +22,7 @@
           <canvas data-processing-sources="/assets/{{ page.processing_project }}/{{ page.processing_project }}.pde"></canvas>
           {% endif %}
 
-          {{ page.content | markdownify }}
+          {{ page.content | liquidify | markdownify }}
 
           {% if page.processing_project and page.embed_processing_postion == 'last' %}
           <canvas data-processing-sources="/assets/{{ page.processing_project }}/{{ page.processing_project }}.pde"></canvas>
