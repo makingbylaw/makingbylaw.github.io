@@ -6,10 +6,6 @@ portfolio_preview: http://demo.krownthemes.com/jackman/img/folio_2.jpg
 category: Interface
 order: 1
 
-# Navigation
-next_portfolio: longing
-next_portfolio_name: "Longing"
-
 # This file is markdown. See how to write it here: http://daringfireball.net/projects/markdown/syntax
 ---
  

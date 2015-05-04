@@ -10,9 +10,6 @@ order: 1000
 processing_project: longing
 embed_processing_postion: 'first'  # Set to 'last' to make it last
 
-# Navigation
-previous_portfolio: matchup
-
 # This file is markdown. See how to write it here: http://daringfireball.net/projects/markdown/syntax
 ---
  

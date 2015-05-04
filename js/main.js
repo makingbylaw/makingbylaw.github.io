@@ -91,7 +91,6 @@ jQuery(document).ready(function($){
     autoControls: true
     });
 
-
 });
 
 //icon fade in with scroll down

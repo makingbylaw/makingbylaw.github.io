@@ -586,3 +586,32 @@ a, #posts-list li, #posts-list time, .projects-list .caption {
   }
 
 }
+
+/* Portfolio nav */
+.portfolio-gallery .gallery-nav {
+  margin: 0 auto 30px;
+}
+.portfolio-gallery .gallery-nav li {
+  float: none;
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.portfolio-gallery .gallery-nav li.current {
+  border-color: #B59A65;
+  background: #B59A65;
+  color: #fff;
+}
+.portfolio-gallery .gallery-nav li.current a {
+  color: #fff;
+}
+.portfolio-gallery ul.gallery li.hidden {
+  opacity: 0.1;
+}
+.portfolio-gallery .gallery li {
+  width: 318px;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}

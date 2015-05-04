@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Me
+title: Portfolio
 overview: true
 ---
 
@@ -15,11 +15,17 @@ overview: true
                 <span class="section-subtitle">Things that i am proud with</a></span>
             </header>
 
-            <ul class="projects-list clearfix">
+            <div class="portfolio-gallery">
 
-                {% portfolio %}
+                {% portfolio_categories %}
 
-            </ul>
+                <ul class="gallery projects-list clearfix">
+
+                    {% portfolio %}
+
+                </ul>
+
+            </div>
 
         </section>
 

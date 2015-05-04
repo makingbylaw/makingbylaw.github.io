@@ -15,7 +15,9 @@ module Jekyll
       exclude = Regexp.new('index.html$', Regexp::EXTENDED | Regexp::IGNORECASE)
       files = Dir.glob(directory_files).reject{|f| f =~ exclude }
       files.each do |filename|
-        templates << YAML.load_file(filename)
+        template = YAML.load_file(filename)
+        template['filename'] = Pathname.new(filename).basename('.md')
+        templates << template
       end
 
       # Sort the templates
@@ -24,9 +26,10 @@ module Jekyll
       # Build the result
       result = ''
       templates.each do |template|
+        #puts template.inspect
         result << "
-        <li>
-          <a href=\".html\">
+        <li class=\"#{ template['category'].downcase.gsub(" ", "-") }\">
+          <a href=\"/portfolio/#{template['filename']}.html\">
             <img src=\"#{template['portfolio_preview']}\" alt=\"\" />
             <div class=\"caption\">
               <div>
