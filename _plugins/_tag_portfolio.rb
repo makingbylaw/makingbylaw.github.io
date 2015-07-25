@@ -3,57 +3,47 @@ module Jekyll
 
     def initialize(tag_name, text, tokens)
       super
-      @portfolio_page = text.strip! || text
     end
 
     def render(context)
 
-      title = ""
-      subtitle = ""
-      preview = ""
+      source_dir = context.registers[:site].source
+      directory_files = File.join(source_dir, '/portfolio/', "*")
 
-      f = File.open("./portfolio/#{@portfolio_page}.md", 'r')
-      header_count = 0
-      f.each_line do |line| 
-        # Detect a header
-        if line.start_with?('---')
-          header_count = header_count + 1
-        end
-
-        # Break out if we've passed the header
-        if header_count > 1
-          break
-        end
-
-        if line.start_with?('title:')
-          title = line[6..-1]
-        elsif line.start_with?('subtitle:')
-          subtitle = line[9..-1]
-        elsif line.start_with?('portfolio_preview:')
-          preview = line[18..-1]
-        end
+      # Load the templates
+      templates = []
+      exclude = Regexp.new('index.html$', Regexp::EXTENDED | Regexp::IGNORECASE)
+      files = Dir.glob(directory_files).reject{|f| f =~ exclude }
+      files.each do |filename|
+        template = YAML.load_file(filename)
+        template['filename'] = Pathname.new(filename).basename('.md')
+        templates << template
       end
-      f.close
 
-      title = title.strip! || title
-      subtitle = subtitle.strip! || subtitle
-      preview = preview.strip! || preview
+      # Sort the templates
+      templates.sort! {|x, y| x['order'] <=> y['order']}
 
-      return "
-      <li>
-        <a href=\"#{@portfolio_page}.html\">
-          <img src=\"#{preview}\" alt=\"\" />
-          <div class=\"caption\">
-            <div>
-              <h4>#{title}</h4>
-              <span>#{subtitle}</span>
+      # Build the result
+      result = ''
+      templates.each do |template|
+        #puts template.inspect
+        result << "
+        <li class=\"#{ template['category'].downcase.gsub(" ", "-") }\">
+          <a href=\"/portfolio/#{template['filename']}.html\">
+            <img src=\"#{template['portfolio_preview']}\" alt=\"\" />
+            <div class=\"caption\">
+              <div>
+                <h4>#{template['title']}</h4>
+                <span>#{template['subtitle']}</span>
+              </div>
             </div>
-          </div>
-        </a>
-      </li>
-      "
+          </a>
+        </li>
+        "
+      end
+      result
     end
   end
 end
 
-Liquid::Template.register_tag('portfolio_item', Jekyll::PortfolioTag)
+Liquid::Template.register_tag('portfolio', Jekyll::PortfolioTag)

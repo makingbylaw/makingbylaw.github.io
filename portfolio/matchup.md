@@ -4,24 +4,25 @@ title:  Match Up
 subtitle: Some cool stuff
 portfolio_preview: http://demo.krownthemes.com/jackman/img/folio_2.jpg
 category: Interface
-
-# Navigation
-next_portfolio: longing
-next_portfolio_name: "Longing"
+order: 1
 
 # This file is markdown. See how to write it here: http://daringfireball.net/projects/markdown/syntax
+# Slideshow options as per http://bxslider.com/options
+# One exception is thumbnails: 'scaled' - this will generate a pager using thumbnails. It can either be 'scaled', 'thumbed' or 'none'
 ---
  
 Match Up game description
 
-[This is a link](http://www.google.com)
+{% slideshow [mode:'fade', auto: true, thumbnails: 'scaled', easing: 'ease'] %}
 
-![Image Text](/img/matchup_0.png)
-![Image Text](/img/matchup_1.png)
-![Image Text](/img/matchup_2.png)
-![Image Text](/img/matchup_3.png)
-![Image Text](/img/matchup_4.png)
-![Image Text](/img/matchup_5.png)
-![Image Text](/img/matchup_6.png)
-![Image Text](/img/matchup_7.png)
-![Image Text](/img/matchup_8.png)
+/img/matchup/matchup_1.png
+/img/matchup/matchup_2.png
+/img/matchup/matchup_3.png
+/img/matchup/matchup_4.png
+/img/matchup/matchup_5.png
+/img/matchup/matchup_6.png
+/img/matchup/matchup_7.png
+/img/matchup/matchup_8.png
+/img/matchup/matchup_9.png
+
+{% endslideshow %}
